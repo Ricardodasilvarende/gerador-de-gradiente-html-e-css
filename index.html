@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Gradientes Moderno</title>
+    <!-- Vinculação do arquivo CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gerador de Gradientes</h1>
+
+        <!-- Caixa onde o gradiente será exibido em tempo real -->
+        <div class="preview-box" id="preview"></div>
+
+        <!-- Seleção de Cores -->
+        <div class="control-group">
+            <div class="color-pickers">
+                <div class="color-wrapper">
+                    <label for="color1">Cor Inicial</label>
+                    <input type="color" id="color1" value="#ff007f">
+                </div>
+                <div class="color-wrapper">
+                    <label for="color2">Cor Final</label>
+                    <input type="color" id="color2" value="#7f00ff">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipo de Gradiente -->
+        <div class="control-group">
+            <label for="type">Tipo de Estilo</label>
+            <select id="type">
+                <option value="linear">Linear</option>
+                <option value="radial">Radial</option>
+            </select>
+        </div>
+
+        <!-- Ângulo (Apenas para Linear) -->
+        <div class="control-group" id="angle-container">
+            <label for="angle">Ângulo do Gradiente</label>
+            <div class="range-wrapper">
+                <input type="range" id="angle" min="0" max="360" value="135">
+                <span id="angle-value">135°</span>
+            </div>
+        </div>
+
+        <!-- Código de Saída e Botão Copiar -->
+        <div class="output-box">
+            <textarea id="css-code" readonly></textarea>
+            <button class="btn-copy" id="btn-copy">Copiar</button>
+        </div>
+    </div>
+
+    <!-- Vinculação do arquivo Javascript externo -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
